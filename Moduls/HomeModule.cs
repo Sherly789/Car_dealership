@@ -20,12 +20,10 @@ namespace CarDealership
         return View["car_added.cshtml", newCar];
       };
 
-    //   Post["/task_added"] = _ => {
-    //   Task newTask = new Task (Request.Form["new-task"]);
-    //   newTask.Save();
-    //   return View["task_added.cshtml", newTask];
-    // };
-
+      Post["/car_cleared"] = _ => {
+        Car.ClearAll();
+        return View["car_cleared.cshtml"];
+      };
 
 
     }

@@ -8,7 +8,7 @@ namespace CarDealership.Objects
     private string _MakeModel;
     private int _Price;
     private int _Miles;
-
+    private static List<Car> _instances = new List<Car> {};
 
 
     public Car(string carModel, int carPrice, int carMiles)
@@ -16,6 +16,7 @@ namespace CarDealership.Objects
       _MakeModel = carModel;
       _Price = carPrice;
       _Miles = carMiles;
+      _instances.Add(this);
     }
 
     public void SetMakeModel(string newMakeModel)
@@ -43,6 +44,15 @@ namespace CarDealership.Objects
     public int GetMiles()
     {
       return _Miles;
+    }
+
+    public static List<Car> GetAll()
+    {
+      return _instances;
+    }
+    public static void ClearAll()
+    {
+      _instances.Clear();
     }
 
   }
