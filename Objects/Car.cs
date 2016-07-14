@@ -9,6 +9,8 @@ namespace CarDealership.Objects
     private int _Price;
     private int _Miles;
 
+
+
     public Car(string carModel, int carPrice, int carMiles)
     {
       _MakeModel = carModel;
@@ -44,5 +46,4 @@ namespace CarDealership.Objects
     }
 
   }
-
 }

@@ -17,8 +17,17 @@ namespace CarDealership
           Request.Query["new-price"],
           Request.Query["new-miles"]
         );
-        return View["view_all_cars.cshtml", newCar];
+        return View["car_added.cshtml", newCar];
       };
+
+    //   Post["/task_added"] = _ => {
+    //   Task newTask = new Task (Request.Form["new-task"]);
+    //   newTask.Save();
+    //   return View["task_added.cshtml", newTask];
+    // };
+
+
+
     }
   }
 }
