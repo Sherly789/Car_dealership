@@ -11,11 +11,11 @@ namespace CarDealership
       Get["/"] = _ => {
         return View["add_car_info.cshtml"];
       };
-      Get["/view_all_cars"] = _ => {
+      Post["/view_all_cars"] = _ => {
         Car newCar = new Car(
-          Request.Query["new-model"],
-          Request.Query["new-price"],
-          Request.Query["new-miles"]
+          Request.Form["new-model"],
+          Request.Form["new-price"],
+          Request.Form["new-miles"]
         );
         return View["car_added.cshtml", newCar];
       };
